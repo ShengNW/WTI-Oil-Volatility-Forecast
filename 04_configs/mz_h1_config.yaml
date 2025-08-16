@@ -1,0 +1,140 @@
+project_root: "F:/CODE/social/JianZhi/future"
+
+asset: "CL_WTI"
+freq: "1min"
+h: 1
+
+use_ratio_gls: false
+hac_lag: 1
+
+# --- 标签（y_true）：均来自 test_set，单位=方差(VAR) ---
+rm_sources:
+  base_dir: "WTI_volatility_forecast_replication/03_results/intermediate_results/volatility_estimates/test_set"
+  items:
+    - rm: "RV"
+      pattern: "CL_WTI_RV_daily_1min_test.parquet"
+      unit: "VAR"
+    - rm: "TSRV"
+      pattern: "CL_WTI_TSRV_daily_1min_test.parquet"
+      unit: "VAR"
+    - rm: "MedRV"
+      pattern: "CL_WTI_MedRV_daily_1min_test.parquet"
+      unit: "VAR"
+    - rm: "BV"
+      pattern: "CL_WTI_BV_daily_1min_test.parquet"
+      unit: "VAR"
+    - rm: "JWTSRV"
+      pattern: "CL_WTI_JWTSRV_daily_1min_test.parquet"
+      unit: "VAR"
+    - rm: "RK"
+      pattern: "realized_kernel_estimates_test.parquet"
+      unit: "VAR"
+    - rm: "GARCH"
+      pattern: "garch_11_test.parquet"
+      unit: "VOL"
+
+
+# --- 预测（y_pred）：统一转换为方差(VAR)。ANN/HAR/ARFIMA 的 1 步预测通常是 σ(VOL) ---
+forecast_sources:
+  - model: "ANN"
+    base_dir: "WTI_volatility_forecast_replication/03_results/final_forecasts/ANN"
+    entries:
+      - rm: "RV"
+        pattern: "CL_WTI_RV_daily_1min_ANN_1step_test.parquet"
+        unit: "VOL"
+        cumulative: false
+      - rm: "TSRV"
+        pattern: "CL_WTI_TSRV_daily_1min_ANN_1step_test.parquet"
+        unit: "VOL"
+        cumulative: false
+      - rm: "MedRV"
+        pattern: "CL_WTI_MedRV_daily_1min_ANN_1step_test.parquet"
+        unit: "VOL"
+        cumulative: false
+      - rm: "BV"
+        pattern: "CL_WTI_BV_daily_1min_ANN_1step_test.parquet"
+        unit: "VOL"
+        cumulative: false
+      - rm: "JWTSRV"
+        pattern: "CL_WTI_JWTSRV_daily_1min_ANN_1step_test.parquet"
+        unit: "VOL"
+        cumulative: false
+      - rm: "RK"
+        pattern: "CL_WTI_RK_daily_1min_ANN_1step_test.parquet"
+        unit: "VOL"
+        cumulative: false
+
+  - model: "HAR"
+    base_dir: "WTI_volatility_forecast_replication/03_results/final_forecasts/HAR"
+    entries:
+      - rm: "RV"
+        pattern: "HAR_RV_1min_forecast.parquet"
+        unit: "VOL"
+        cumulative: false
+      - rm: "TSRV"
+        pattern: "HAR_TSRV_1min_forecast.parquet"
+        unit: "VOL"
+        cumulative: false
+      - rm: "MedRV"
+        pattern: "HAR_MedRV_1min_forecast.parquet"
+        unit: "VOL"
+        cumulative: false
+      - rm: "BV"
+        pattern: "HAR_BV_1min_forecast.parquet"
+        unit: "VOL"
+        cumulative: false
+      - rm: "JWTSRV"
+        pattern: "HAR_JWTSRV_1min_forecast.parquet"
+        unit: "VOL"
+        cumulative: false
+      - rm: "RK"
+        pattern: "HAR_RK_1min_forecast.parquet"
+        unit: "VOL"
+        cumulative: false
+
+  - model: "ARFIMA"
+    base_dir: "WTI_volatility_forecast_replication/03_results/final_forecasts/ARFIMA"
+    entries:
+      - rm: "RV"
+        pattern: "ARFIMA_RV_1min_forecast.parquet"
+        unit: "VOL"
+        cumulative: false
+      - rm: "TSRV"
+        pattern: "ARFIMA_TSRV_1min_forecast.parquet"
+        unit: "VOL"
+        cumulative: false
+      - rm: "MedRV"
+        pattern: "ARFIMA_MedRV_1min_forecast.parquet"
+        unit: "VOL"
+        cumulative: false
+      - rm: "BV"
+        pattern: "ARFIMA_BV_1min_forecast.parquet"
+        unit: "VOL"
+        cumulative: false
+      - rm: "JWTSRV"
+        pattern: "ARFIMA_JWTSRV_1min_forecast.parquet"
+        unit: "VOL"
+        cumulative: false
+      - rm: "RK"
+        pattern: "ARFIMA_RK_1min_forecast.parquet"
+        unit: "VOL"
+        cumulative: false
+
+  - model: "GARCH"
+    base_dir: "WTI_volatility_forecast_replication/03_results/final_forecasts/GARCH"
+    entries:
+      - rm: "GARCH"
+        pattern: "garch_11_test_cumulative_h1.parquet"
+        unit: "VOL"
+        cumulative: true
+
+# 注：你说 GARCH 与这些 RM 不对应，这里就先不配置 GARCH。
+# 以后要做 GARCH 的 MZ，可单独新建一个 YAML。
+
+plot:
+  order_rms: ["RV","TSRV","MedRV","BV","JWTSRV","RK","GARCH"]   # ← 如果你也配置了 GARCH，就把 "GARCH" 加进来
+  order_models: ["ARFIMA","HAR","ANN","GARCH"]                  # ← 模型图例顺序，这里把 "GARCH" 放最后
+  out_dir: "F:/CODE/social/JianZhi/future/project/05_outputs"
+  fig_name: "figures/Fig3_MZ_R2_h1.png"
+  table_name: "tables/mz_h1_r2.csv"
+

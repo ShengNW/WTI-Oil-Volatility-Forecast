@@ -1,0 +1,135 @@
+=== y_true 列检查 @ 2025-08-15 19:27:10.943951 ===
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\volatility_estimates\cumulative_forecasts\CL_WTI_RV_daily_5min_test_test_cumulative_h5.parquet
+包含的列名有: RV_sigma_cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\volatility_estimates\cumulative_forecasts\CL_WTI_RV_daily_5min_test_test_cumulative_h5.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=DateTime
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\volatility_estimates\cumulative_forecasts\CL_WTI_TSRV_daily_5min_test_test_cumulative_h5.parquet
+包含的列名有: TSRV_sigma_cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\volatility_estimates\cumulative_forecasts\CL_WTI_TSRV_daily_5min_test_test_cumulative_h5.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=DateTime
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\volatility_estimates\cumulative_forecasts\CL_WTI_MedRV_daily_5min_test_test_cumulative_h5.parquet
+包含的列名有: MedRV_sigma_cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\volatility_estimates\cumulative_forecasts\CL_WTI_MedRV_daily_5min_test_test_cumulative_h5.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=DateTime
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\volatility_estimates\cumulative_forecasts\CL_WTI_BV_daily_5min_test__BV_test_cumulative_h5.parquet
+包含的列名有: BV_sigma_cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\volatility_estimates\cumulative_forecasts\CL_WTI_BV_daily_5min_test__BV_test_cumulative_h5.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=DateTime
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\volatility_estimates\cumulative_forecasts\CL_WTI_JWTSRV_daily_5min_test_test_cumulative_h5.parquet
+包含的列名有: JWTSRV_sigma_cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\volatility_estimates\cumulative_forecasts\CL_WTI_JWTSRV_daily_5min_test_test_cumulative_h5.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=DateTime
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\volatility_estimates\cumulative_forecasts\realized_kernel_estimates_test_RK_1min_test_cumulative_h5.parquet
+包含的列名有: RK_1min_sigma_cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\volatility_estimates\cumulative_forecasts\realized_kernel_estimates_test_RK_1min_test_cumulative_h5.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=DateTime
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\volatility_estimates\cumulative_forecasts\realized_kernel_estimates_test_RK_5min_test_cumulative_h5.parquet
+包含的列名有: RK_5min_sigma_cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\volatility_estimates\cumulative_forecasts\realized_kernel_estimates_test_RK_5min_test_cumulative_h5.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=DateTime
+
+=== y_pred 列检查 @ 2025-08-15 19:27:12.074977 ===
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\HAR\HAR_RK_1min_cumulative_h5.parquet
+包含的列名有: cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\HAR\HAR_RK_1min_cumulative_h5.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=DateTime
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\HAR\HAR_RK_5min_cumulative_h5.parquet
+包含的列名有: cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\HAR\HAR_RK_5min_cumulative_h5.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=DateTime
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\HAR\HAR_RV_5min_cumulative_h5.parquet
+包含的列名有: cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\HAR\HAR_RV_5min_cumulative_h5.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=DateTime
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\HAR\HAR_TSRV_5min_cumulative_h5.parquet
+包含的列名有: cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\HAR\HAR_TSRV_5min_cumulative_h5.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=DateTime
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\HAR\HAR_MedRV_5min_cumulative_h5.parquet
+包含的列名有: cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\HAR\HAR_MedRV_5min_cumulative_h5.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=DateTime
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\HAR\HAR_BV_5min_cumulative_h5.parquet
+包含的列名有: cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\HAR\HAR_BV_5min_cumulative_h5.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=DateTime
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\HAR\HAR_JWTSRV_5min_cumulative_h5.parquet
+包含的列名有: cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\HAR\HAR_JWTSRV_5min_cumulative_h5.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=DateTime
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\ARFIMA\ARFIMA_RV_5min_cumulative.parquet
+包含的列名有: RV_cumVar_h5, RV_cumVolRMS_h5, RV_cumVar_h10, RV_cumVolRMS_h10
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\ARFIMA\ARFIMA_RV_5min_cumulative.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=DateTime
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\ARFIMA\ARFIMA_TSRV_5min_cumulative.parquet
+包含的列名有: TSRV_cumVar_h5, TSRV_cumVolRMS_h5, TSRV_cumVar_h10, TSRV_cumVolRMS_h10
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\ARFIMA\ARFIMA_TSRV_5min_cumulative.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=DateTime
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\ARFIMA\ARFIMA_MedRV_5min_cumulative.parquet
+包含的列名有: MedRV_cumVar_h5, MedRV_cumVolRMS_h5, MedRV_cumVar_h10, MedRV_cumVolRMS_h10
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\ARFIMA\ARFIMA_MedRV_5min_cumulative.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=DateTime
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\ARFIMA\ARFIMA_BV_5min_cumulative.parquet
+包含的列名有: BV_cumVar_h5, BV_cumVolRMS_h5, BV_cumVar_h10, BV_cumVolRMS_h10
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\ARFIMA\ARFIMA_BV_5min_cumulative.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=DateTime
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\ARFIMA\ARFIMA_JWTSRV_5min_cumulative.parquet
+包含的列名有: JWTSRV_cumVar_h5, JWTSRV_cumVolRMS_h5, JWTSRV_cumVar_h10, JWTSRV_cumVolRMS_h10
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\ARFIMA\ARFIMA_JWTSRV_5min_cumulative.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=DateTime
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\ARFIMA\ARFIMA_RK_1min_cumulative.parquet
+包含的列名有: RK_cumVar_h5, RK_cumVolRMS_h5, RK_cumVar_h10, RK_cumVolRMS_h10
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\ARFIMA\ARFIMA_RK_1min_cumulative.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=DateTime
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\ARFIMA\ARFIMA_RK_5min_cumulative.parquet
+包含的列名有: RK_cumVar_h5, RK_cumVolRMS_h5, RK_cumVar_h10, RK_cumVolRMS_h10
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\ARFIMA\ARFIMA_RK_5min_cumulative.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=DateTime
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_RV_daily_1min_ANN_cumulative_h5_test.parquet
+包含的列名有: RV_cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_RV_daily_1min_ANN_cumulative_h5_test.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=None
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_RV_daily_5min_ANN_cumulative_h5_test.parquet
+包含的列名有: RV_cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_RV_daily_5min_ANN_cumulative_h5_test.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=None
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_MedRV_daily_1min_ANN_cumulative_h5_test.parquet
+包含的列名有: MedRV_cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_MedRV_daily_1min_ANN_cumulative_h5_test.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=None
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_MedRV_daily_5min_ANN_cumulative_h5_test.parquet
+包含的列名有: MedRV_cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_MedRV_daily_5min_ANN_cumulative_h5_test.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=None
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_BV_daily_1min_ANN_cumulative_h5_test.parquet
+包含的列名有: BV_cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_BV_daily_1min_ANN_cumulative_h5_test.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=None
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_BV_daily_5min_ANN_cumulative_h5_test.parquet
+包含的列名有: BV_cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_BV_daily_5min_ANN_cumulative_h5_test.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=None
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_JWTSRV_daily_1min_ANN_cumulative_h5_test.parquet
+包含的列名有: JWTSRV_cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_JWTSRV_daily_1min_ANN_cumulative_h5_test.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=None
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_JWTSRV_daily_5min_ANN_cumulative_h5_test.parquet
+包含的列名有: JWTSRV_cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_JWTSRV_daily_5min_ANN_cumulative_h5_test.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=None
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_TSRV_daily_1min_ANN_cumulative_h5_test.parquet
+包含的列名有: TSRV_cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_TSRV_daily_1min_ANN_cumulative_h5_test.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=None
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_TSRV_daily_5min_ANN_cumulative_h5_test.parquet
+包含的列名有: TSRV_cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_TSRV_daily_5min_ANN_cumulative_h5_test.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=None
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_RK_daily_1min_ANN_cumulative_h5_test.parquet
+包含的列名有: RK_cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_RK_daily_1min_ANN_cumulative_h5_test.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=None
+文件: F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_RK_daily_5min_ANN_cumulative_h5_test.parquet
+包含的列名有: RK_cumulative_h5
+--------------------------------------------------------------------------------
+[INFO] F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_RK_daily_5min_ANN_cumulative_h5_test.parquet 无列 DateTime，使用 DatetimeIndex 作为日期。index.name=None

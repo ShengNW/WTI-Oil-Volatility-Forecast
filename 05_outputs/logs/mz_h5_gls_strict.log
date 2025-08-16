@@ -1,0 +1,26 @@
+[2025-08-15 19:47:13] === main_mz_h5_gls_strict v2 启动 ===
+[2025-08-15 19:47:14] [加载] ./05_outputs/tables/tmp_h5_merged.csv，原始 39270 行，基础过滤后 39270 行
+[2025-08-15 19:47:14] [PANEL] (rm=BV, freq=5min, model=ANN) R2_ratio_ols=0.858283, R2_level_wls=0.154878, beta_ratio=0.2633804792523785, beta_level=0.2633804792523786
+[2025-08-15 19:47:14] [PANEL] (rm=BV, freq=5min, model=ARFIMA) R2_ratio_ols=0.050556, R2_level_wls=0.368127, beta_ratio=0.7915205718390204, beta_level=0.7915205718390204
+[2025-08-15 19:47:14] [PANEL] (rm=BV, freq=5min, model=HAR) R2_ratio_ols=0.109924, R2_level_wls=0.281817, beta_ratio=14.50056713103729, beta_level=14.500567131037268
+[2025-08-15 19:47:14] [PANEL] (rm=JWTSRV, freq=5min, model=ANN) R2_ratio_ols=0.924240, R2_level_wls=0.051424, beta_ratio=0.14004352274733148, beta_level=0.14004352274733095
+[2025-08-15 19:47:14] [PANEL] (rm=JWTSRV, freq=5min, model=ARFIMA) R2_ratio_ols=0.049025, R2_level_wls=0.443912, beta_ratio=0.8172121768053655, beta_level=0.817212176805365
+[2025-08-15 19:47:14] [PANEL] (rm=JWTSRV, freq=5min, model=HAR) R2_ratio_ols=0.165511, R2_level_wls=0.351204, beta_ratio=15.142037145349228, beta_level=15.142037145349224
+[2025-08-15 19:47:14] [PANEL] (rm=MedRV, freq=5min, model=ANN) R2_ratio_ols=0.620423, R2_level_wls=0.064368, beta_ratio=0.14663118394499283, beta_level=0.14663118394499325
+[2025-08-15 19:47:14] [PANEL] (rm=MedRV, freq=5min, model=ARFIMA) R2_ratio_ols=0.012043, R2_level_wls=0.326330, beta_ratio=1.1774787487640888, beta_level=1.177478748764088
+[2025-08-15 19:47:14] [PANEL] (rm=MedRV, freq=5min, model=HAR) R2_ratio_ols=0.081438, R2_level_wls=0.208057, beta_ratio=15.14644256392567, beta_level=15.146442563925657
+[2025-08-15 19:47:14] [PANEL] (rm=RK_1min, freq=1min, model=ANN) R2_ratio_ols=0.983403, R2_level_wls=0.058506, beta_ratio=0.2455294600514044, beta_level=0.2455294600514043
+[2025-08-15 19:47:14] [PANEL] (rm=RK_1min, freq=1min, model=ARFIMA) R2_ratio_ols=0.017760, R2_level_wls=0.338636, beta_ratio=0.8863400322024275, beta_level=0.8863400322024269
+[2025-08-15 19:47:14] [PANEL] (rm=RK_1min, freq=1min, model=HAR) R2_ratio_ols=0.100036, R2_level_wls=0.262490, beta_ratio=8.94008431247453, beta_level=8.940084312474527
+[2025-08-15 19:47:14] [PANEL] (rm=RK_5min, freq=5min, model=ANN) R2_ratio_ols=0.828869, R2_level_wls=0.173988, beta_ratio=0.31379958821238496, beta_level=0.3137995882123849
+[2025-08-15 19:47:14] [PANEL] (rm=RK_5min, freq=5min, model=ARFIMA) R2_ratio_ols=0.003241, R2_level_wls=0.344175, beta_ratio=0.972810706058818, beta_level=0.9728107060588177
+[2025-08-15 19:47:14] [PANEL] (rm=RK_5min, freq=5min, model=HAR) R2_ratio_ols=0.104738, R2_level_wls=0.265205, beta_ratio=8.804340208326229, beta_level=8.804340208326218
+[2025-08-15 19:47:14] [PANEL] (rm=RV, freq=5min, model=ANN) R2_ratio_ols=0.957682, R2_level_wls=0.014097, beta_ratio=0.130187243174906, beta_level=0.1301872431749062
+[2025-08-15 19:47:14] [PANEL] (rm=RV, freq=5min, model=ARFIMA) R2_ratio_ols=0.036717, R2_level_wls=0.307162, beta_ratio=0.8218496753960794, beta_level=0.8218496753960789
+[2025-08-15 19:47:14] [PANEL] (rm=RV, freq=5min, model=HAR) R2_ratio_ols=0.084761, R2_level_wls=0.242090, beta_ratio=8.89156951966986, beta_level=8.89156951966985
+[2025-08-15 19:47:14] [PANEL] (rm=TSRV, freq=5min, model=ANN) R2_ratio_ols=0.617228, R2_level_wls=0.085602, beta_ratio=0.17019028349947252, beta_level=0.17019028349947266
+[2025-08-15 19:47:14] [PANEL] (rm=TSRV, freq=5min, model=ARFIMA) R2_ratio_ols=0.000542, R2_level_wls=0.328249, beta_ratio=1.0784069114742492, beta_level=1.0784069114742494
+[2025-08-15 19:47:14] [PANEL] (rm=TSRV, freq=5min, model=HAR) R2_ratio_ols=0.131626, R2_level_wls=0.232760, beta_ratio=12.369021859439798, beta_level=12.369021859439815
+[2025-08-15 19:47:14] [落地] 主结果 -> ./05_outputs/tables\mz_h5_gls_strict.csv, shape=(21, 14)
+[2025-08-15 19:47:14] [落地] 体检表 -> ./05_outputs/tables\mz_h5_gls_diagnostics.csv, shape=(21, 18)
+[2025-08-15 19:47:14] === 完成 ===

@@ -1,0 +1,7 @@
+
+=== main_mz_h5 启动 @ 2025-08-15 19:28:59.273026 ===
+[加载] y_true: ./05_outputs/tables\tmp_h5_y_true.csv, shape=(13090, 4)
+[加载] y_pred: ./05_outputs/tables\tmp_h5_y_pred.csv, shape=(48750, 5)
+[merge] 合并后 39270 行；四键重复行数: 0
+[落地] merged -> ./05_outputs/tables\tmp_h5_merged.csv, shape=(39270, 6)
+[落地] R2 -> ./05_outputs/tables\mz_h5_r2.csv, shape=(21, 4)

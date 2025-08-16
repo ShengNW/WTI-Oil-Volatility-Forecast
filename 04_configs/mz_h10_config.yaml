@@ -1,0 +1,153 @@
+asset: "CL_WTI"
+h: 10
+freqs: ["1min", "5min"]
+
+# =============== 累积标签（y_true，训练/测试标签；单位多为 VOL，需要平方） =================
+labels:
+  base_dir: "F:/CODE/social/JianZhi/future/WTI_volatility_forecast_replication/03_results/intermediate_results/volatility_estimates/cumulative_forecasts"
+  items:
+    - rm: "RV"
+      pattern: "CL_WTI_RV_daily_{FREQ}_test_test_cumulative_h10.parquet"
+      col: "RV_sigma_cumulative_h10"
+      unit: "VOL"
+    - rm: "RK_1min"
+      pattern: "realized_kernel_estimates_test_RK_1min_test_cumulative_h10.parquet"
+      col: "RK_1min_sigma_cumulative_h10"
+      unit: "VOL"
+    - rm: "RK_5min"
+      pattern: "realized_kernel_estimates_test_RK_5min_test_cumulative_h10.parquet"
+      col: "RK_5min_sigma_cumulative_h10"
+      unit: "VOL"
+    - rm: "MedRV"
+      pattern: "CL_WTI_MedRV_daily_{FREQ}_test_test_cumulative_h10.parquet"
+      col: "MedRV_sigma_cumulative_h10"
+      unit: "VOL"
+    - rm: "JWTSRV"
+      pattern: "CL_WTI_JWTSRV_daily_{FREQ}_test_test_cumulative_h10.parquet"
+      col: "JWTSRV_sigma_cumulative_h10"
+      unit: "VOL"
+    - rm: "TSRV"
+      pattern: "CL_WTI_TSRV_daily_{FREQ}_test_test_cumulative_h10.parquet"
+      col: "TSRV_sigma_cumulative_h10"
+      unit: "VOL"
+    - rm: "BV"
+      pattern: "CL_WTI_BV_daily_{FREQ}_test__BV_test_cumulative_h10.parquet"
+      col: "BV_sigma_cumulative_h10"
+      unit: "VOL"
+    - rm: "GARCH"
+      pattern: "garch_11_test_test_cumulative_h10.parquet"
+      col: "garch_11_sigma_cumulative_h10"
+      unit: "VOL"
+
+# =============== 预测（y_pred） =================
+forecasts:
+
+  # --- ANN（累积 = VAR）---
+  - model: "ANN"
+    base_dir: "F:/CODE/social/JianZhi/future/WTI_volatility_forecast_replication/03_results/intermediate_results/cumulative_forecasts/ANN"
+    entries:
+      - rm: "RV"
+        pattern: "CL_WTI_RV_daily_{FREQ}_ANN_cumulative_h10_test.parquet"
+        col: "RV_cumulative_h10"
+        unit: "VAR"
+      - rm: "TSRV"
+        pattern: "CL_WTI_TSRV_daily_{FREQ}_ANN_cumulative_h10_test.parquet"
+        col: "TSRV_cumulative_h10"
+        unit: "VAR"
+      - rm: "MedRV"
+        pattern: "CL_WTI_MedRV_daily_{FREQ}_ANN_cumulative_h10_test.parquet"
+        col: "MedRV_cumulative_h10"
+        unit: "VAR"
+      - rm: "JWTSRV"
+        pattern: "CL_WTI_JWTSRV_daily_{FREQ}_ANN_cumulative_h10_test.parquet"
+        col: "JWTSRV_cumulative_h10"
+        unit: "VAR"
+      - rm: "BV"
+        pattern: "CL_WTI_BV_daily_{FREQ}_ANN_cumulative_h10_test.parquet"
+        col: "BV_cumulative_h10"
+        unit: "VAR"
+      - rm: "RK"
+        pattern: "CL_WTI_RK_daily_{FREQ}_ANN_cumulative_h10_test.parquet"
+        col: "RK_cumulative_h10"
+        unit: "VAR"
+
+  # --- HAR（累积 = VOL，列名统一为 cumulative_h10）---
+  - model: "HAR"
+    base_dir: "F:/CODE/social/JianZhi/future/WTI_volatility_forecast_replication/03_results/final_forecasts/HAR"
+    entries:
+      - rm: "RV"
+        pattern: "HAR_RV_{FREQ}_cumulative_h10.parquet"
+        col: "cumulative_h10"
+        unit: "VOL"
+      - rm: "TSRV"
+        pattern: "HAR_TSRV_{FREQ}_cumulative_h10.parquet"
+        col: "cumulative_h10"
+        unit: "VOL"
+      - rm: "MedRV"
+        pattern: "HAR_MedRV_{FREQ}_cumulative_h10.parquet"
+        col: "cumulative_h10"
+        unit: "VOL"
+      - rm: "JWTSRV"
+        pattern: "HAR_JWTSRV_{FREQ}_cumulative_h10.parquet"
+        col: "cumulative_h10"
+        unit: "VOL"
+      - rm: "BV"
+        pattern: "HAR_BV_{FREQ}_cumulative_h10.parquet"
+        col: "cumulative_h10"
+        unit: "VOL"
+      - rm: "RK"
+        pattern: "HAR_RK_{FREQ}_cumulative_h10.parquet"
+        col: "cumulative_h10"
+        unit: "VOL"
+
+  # --- ARFIMA（取 *_cumVar_h10 = VAR）---
+  - model: "ARFIMA"
+    base_dir: "F:/CODE/social/JianZhi/future/WTI_volatility_forecast_replication/03_results/final_forecasts/ARFIMA"
+    entries:
+      - rm: "RV"
+        pattern: "ARFIMA_RV_{FREQ}_cumulative.parquet"
+        col: "RV_cumVar_h10"
+        unit: "VAR"
+      - rm: "TSRV"
+        pattern: "ARFIMA_TSRV_{FREQ}_cumulative.parquet"
+        col: "TSRV_cumVar_h10"
+        unit: "VAR"
+      - rm: "MedRV"
+        pattern: "ARFIMA_MedRV_{FREQ}_cumulative.parquet"
+        col: "MedRV_cumVar_h10"
+        unit: "VAR"
+      - rm: "JWTSRV"
+        pattern: "ARFIMA_JWTSRV_{FREQ}_cumulative.parquet"
+        col: "JWTSRV_cumVar_h10"
+        unit: "VAR"
+      - rm: "BV"
+        pattern: "ARFIMA_BV_{FREQ}_cumulative.parquet"
+        col: "BV_cumVar_h10"
+        unit: "VAR"
+      - rm: "RK"
+        pattern: "ARFIMA_RK_{FREQ}_cumulative.parquet"
+        col: "RK_cumVar_h10"
+        unit: "VAR"
+
+  # --- GARCH（累积 = VOL）---
+  - model: "GARCH"
+    base_dir: "F:/CODE/social/JianZhi/future/WTI_volatility_forecast_replication/03_results/final_forecasts/GARCH"
+    entries:
+      - rm: "GARCH"
+        pattern: "garch_11_test_cumulative_h10.parquet"
+        col: "garch_forecast_h1_cumulative_h10"
+        unit: "VOL"
+
+# =============== 临时落盘（便于核查读取是否齐全） =================
+io_dump:
+  y_true_csv: "05_outputs/tables/tmp_h10_y_true.csv"
+  y_pred_csv: "05_outputs/tables/tmp_h10_y_pred.csv"
+  log_file:   "05_outputs/logs/mz_h10_read.log"
+
+# =============== 出图（等 main_mz_h10.py 接上就能复用） =================
+plot:
+  order_models: ["ARFIMA", "HAR", "ANN", "HAR-ANN", "GARCH"]
+  order_rms: ["RV", "TSRV", "MedRV", "BV", "JWTSRV", "RK", "RK_1min", "RK_5min"]
+  out_path: "05_outputs/figures/Fig3_MZ_R2_h10.png"
+
+output_table: "05_outputs/tables/mz_h10_r2.csv"

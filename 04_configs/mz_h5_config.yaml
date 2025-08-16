@@ -1,0 +1,219 @@
+# === MZ (h=5) 的严格读取配置 ===
+horizon: 5
+
+# 统一主键定义
+primary_key:
+  date_col: DateTime
+  normalize_to: date
+  freq_value: 5min
+  freq_col: freq
+  rm_col: rm
+  model_col: model
+  value_col_true: y_true
+  value_col_pred: y_pred
+
+# -----------------------------
+# y_true：真实累积波动 (VOL, σ)，来自 volatility_estimates/cumulative_forecasts
+# -----------------------------
+y_true_sources:
+  - rm: RV
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\volatility_estimates\cumulative_forecasts\CL_WTI_RV_daily_5min_test_test_cumulative_h5.parquet'
+    column: RV_sigma_cumulative_h5
+
+  - rm: TSRV
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\volatility_estimates\cumulative_forecasts\CL_WTI_TSRV_daily_5min_test_test_cumulative_h5.parquet'
+    column: TSRV_sigma_cumulative_h5
+
+  - rm: MedRV
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\volatility_estimates\cumulative_forecasts\CL_WTI_MedRV_daily_5min_test_test_cumulative_h5.parquet'
+    column: MedRV_sigma_cumulative_h5
+
+  - rm: BV
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\volatility_estimates\cumulative_forecasts\CL_WTI_BV_daily_5min_test__BV_test_cumulative_h5.parquet'
+    column: BV_sigma_cumulative_h5
+
+  - rm: JWTSRV
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\volatility_estimates\cumulative_forecasts\CL_WTI_JWTSRV_daily_5min_test_test_cumulative_h5.parquet'
+    column: JWTSRV_sigma_cumulative_h5
+
+  - rm: RK_1min
+    freq: 1min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\volatility_estimates\cumulative_forecasts\realized_kernel_estimates_test_RK_1min_test_cumulative_h5.parquet'
+    column: RK_1min_sigma_cumulative_h5
+
+  - rm: RK_5min
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\volatility_estimates\cumulative_forecasts\realized_kernel_estimates_test_RK_5min_test_cumulative_h5.parquet'
+    column: RK_5min_sigma_cumulative_h5
+
+# -----------------------------
+# y_pred：各模型的 h=5 累积预测
+# HAR：cumulative_h5（VOL, σ）
+# ARFIMA：*_cumVolRMS_h5（VOL, σ）
+# ANN：{MEASURE}_cumulative_h5（你的产出；按你描述是 VAR，但先跑通，必要时在代码里做单位统一）
+# -----------------------------
+y_pred_sources:
+
+  # ===== HAR (final_forecasts/HAR) =====
+  - model: HAR
+    rm: RK_1min
+    freq: 1min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\HAR\HAR_RK_1min_cumulative_h5.parquet'
+    column: cumulative_h5
+
+  - model: HAR
+    rm: RK_5min
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\HAR\HAR_RK_5min_cumulative_h5.parquet'
+    column: cumulative_h5
+
+  - model: HAR
+    rm: RV
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\HAR\HAR_RV_5min_cumulative_h5.parquet'
+    column: cumulative_h5
+
+  - model: HAR
+    rm: TSRV
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\HAR\HAR_TSRV_5min_cumulative_h5.parquet'
+    column: cumulative_h5
+
+  - model: HAR
+    rm: MedRV
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\HAR\HAR_MedRV_5min_cumulative_h5.parquet'
+    column: cumulative_h5
+
+  - model: HAR
+    rm: BV
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\HAR\HAR_BV_5min_cumulative_h5.parquet'
+    column: cumulative_h5
+
+  - model: HAR
+    rm: JWTSRV
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\HAR\HAR_JWTSRV_5min_cumulative_h5.parquet'
+    column: cumulative_h5
+
+  # ===== ARFIMA (final_forecasts/ARFIMA) =====
+  - model: ARFIMA
+    rm: RV
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\ARFIMA\ARFIMA_RV_5min_cumulative.parquet'
+    column: RV_cumVolRMS_h5
+
+  - model: ARFIMA
+    rm: TSRV
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\ARFIMA\ARFIMA_TSRV_5min_cumulative.parquet'
+    column: TSRV_cumVolRMS_h5
+
+  - model: ARFIMA
+    rm: MedRV
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\ARFIMA\ARFIMA_MedRV_5min_cumulative.parquet'
+    column: MedRV_cumVolRMS_h5
+
+  - model: ARFIMA
+    rm: BV
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\ARFIMA\ARFIMA_BV_5min_cumulative.parquet'
+    column: BV_cumVolRMS_h5
+
+  - model: ARFIMA
+    rm: JWTSRV
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\ARFIMA\ARFIMA_JWTSRV_5min_cumulative.parquet'
+    column: JWTSRV_cumVolRMS_h5
+
+  - model: ARFIMA
+    rm: RK_1min
+    freq: 1min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\ARFIMA\ARFIMA_RK_1min_cumulative.parquet'
+    column: RK_cumVolRMS_h5
+
+  - model: ARFIMA
+    rm: RK_5min
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\final_forecasts\ARFIMA\ARFIMA_RK_5min_cumulative.parquet'
+    column: RK_cumVolRMS_h5
+
+  # ===== ANN (intermediate_results/cumulative_forecasts/ANN) =====
+  # RV
+  - model: ANN
+    rm: RV
+    freq: 1min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_RV_daily_1min_ANN_cumulative_h5_test.parquet'
+    column: RV_cumulative_h5
+  - model: ANN
+    rm: RV
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_RV_daily_5min_ANN_cumulative_h5_test.parquet'
+    column: RV_cumulative_h5
+
+  # MedRV
+  - model: ANN
+    rm: MedRV
+    freq: 1min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_MedRV_daily_1min_ANN_cumulative_h5_test.parquet'
+    column: MedRV_cumulative_h5
+  - model: ANN
+    rm: MedRV
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_MedRV_daily_5min_ANN_cumulative_h5_test.parquet'
+    column: MedRV_cumulative_h5
+
+  # BV
+  - model: ANN
+    rm: BV
+    freq: 1min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_BV_daily_1min_ANN_cumulative_h5_test.parquet'
+    column: BV_cumulative_h5
+  - model: ANN
+    rm: BV
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_BV_daily_5min_ANN_cumulative_h5_test.parquet'
+    column: BV_cumulative_h5
+
+  # JWTSRV
+  - model: ANN
+    rm: JWTSRV
+    freq: 1min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_JWTSRV_daily_1min_ANN_cumulative_h5_test.parquet'
+    column: JWTSRV_cumulative_h5
+  - model: ANN
+    rm: JWTSRV
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_JWTSRV_daily_5min_ANN_cumulative_h5_test.parquet'
+    column: JWTSRV_cumulative_h5
+
+  # TSRV
+  - model: ANN
+    rm: TSRV
+    freq: 1min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_TSRV_daily_1min_ANN_cumulative_h5_test.parquet'
+    column: TSRV_cumulative_h5
+  - model: ANN
+    rm: TSRV
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_TSRV_daily_5min_ANN_cumulative_h5_test.parquet'
+    column: TSRV_cumulative_h5
+
+  # RK
+  - model: ANN
+    rm: RK_1min
+    freq: 1min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_RK_daily_1min_ANN_cumulative_h5_test.parquet'
+    column: RK_cumulative_h5
+  - model: ANN
+    rm: RK_5min
+    freq: 5min
+    path: 'F:\CODE\social\JianZhi\future\WTI_volatility_forecast_replication\03_results\intermediate_results\cumulative_forecasts\ANN\CL_WTI_RK_daily_5min_ANN_cumulative_h5_test.parquet'
+    column: RK_cumulative_h5
