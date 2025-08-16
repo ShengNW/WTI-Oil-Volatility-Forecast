@@ -1,0 +1,5 @@
+# 忽略 01_data 下的 raw 文件夹（包含那个大CSV）
+01_data/raw/
+# 忽略其他需要排除的文件夹
+01_data/processed/DebugRubbish/
+01_data/temp/

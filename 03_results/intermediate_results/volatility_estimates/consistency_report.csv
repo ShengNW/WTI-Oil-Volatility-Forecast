@@ -1,0 +1,12 @@
+filename,datetime_index,date_range,row_count,G_value,RK_kernel,MedRV_logic,issues
+CL_WTI_RV_daily_5min.parquet,Pass,Pass,2475/2475,N/A,N/A,N/A,Converted index to DateTime; Fixed datetime index; Saved corrected file
+CL_WTI_RV_daily_1min.parquet,Pass,Pass,2475/2475,N/A,N/A,N/A,Converted index to DateTime; Fixed datetime index; Saved corrected file
+CL_WTI_TSRV_daily_1min.parquet,Pass,Pass,2475/2475,Fail,N/A,N/A,Converted index to DateTime; Fixed datetime index; G value not consistently 16; Saved corrected file
+CL_WTI_TSRV_daily_5min.parquet,Pass,Pass,2475/2475,Fail,N/A,N/A,Converted index to DateTime; Fixed datetime index; G value not consistently 16; Saved corrected file
+realized_kernel_estimates.parquet,Pass,Pass,2475/2475,N/A,Pass (columns present),N/A,Converted 'Date' column to DateTime index; Fixed datetime index; Saved corrected file
+CL_WTI_BV_daily_5min.parquet,Pass,Pass,2475/2475,N/A,N/A,N/A,
+CL_WTI_BV_daily_1min.parquet,Pass,Pass,2475/2475,N/A,N/A,N/A,
+CL_WTI_MedRV_daily_5min.parquet,Pass,Pass,2475/2475,N/A,N/A,Pass (non-negative),Set 'DateTime' column as index; Fixed datetime index; Saved corrected file
+CL_WTI_MedRV_daily_1min.parquet,Pass,Pass,2475/2475,N/A,N/A,Pass (non-negative),Set 'DateTime' column as index; Fixed datetime index; Saved corrected file
+CL_WTI_JWTSRV_daily_1min.parquet,Pass,Pass,2475/2475,Fail,N/A,N/A,Removed timezone from index; Fixed datetime index; Missing G column; Saved corrected file
+CL_WTI_JWTSRV_daily_5min.parquet,Pass,Pass,2475/2475,Fail,N/A,N/A,Removed timezone from index; Fixed datetime index; Missing G column; Saved corrected file
